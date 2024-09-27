@@ -5,7 +5,7 @@ class Node {
     }
 }
 
-class Queue {
+export class Queue {
     constructor() {
         this.left = null;
         this.right = null;
@@ -37,7 +37,27 @@ class Queue {
         this.size--;
 
         return deletedValue;
+    }
 
+    shift() {
+        if(this.size === 0) {
+            return null
+        }
+        const deletedValue = this.left.data;
+        this.left = this.left.next;
+        if(this.left === null) {
+            this.right = null;
+        }
+        this.size--;
+
+        return deletedValue;
+    }
+
+    isEmpty() {
+        return this.size === 0;
+    }
+    length() {
+        return this.size;
     }
 
 }
