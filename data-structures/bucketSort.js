@@ -24,4 +24,4 @@ const bucketSort = (arr) => {
 
 console.log(bucketSort([2,1,2,0,0,2]));
 // O(n)
-//stable
+// stable
